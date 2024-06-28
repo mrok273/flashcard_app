@@ -1,0 +1,35 @@
+[project]
+name = "flashcard-app"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "giogio", email = "unknown@domain.invalid" }
+]
+dependencies = [
+    "gensim @ git+https://github.com/piskvorky/gensim.git@dc5b5c48e7454fe22cf98ddac60ff85107226f6a",
+    "pandas>=2.2.2",
+    "streamlit>=1.36.0",
+    "scipy>=1.14.0",
+    "openpyxl>=3.1.4",
+    "ipykernel>=6.29.4",
+    "nltk>=3.8.1",
+    "numpy>=1.8.0, <2.0.0",
+    "matplotlib>=3.9.0",
+    "sentence-transformers>=3.0.1",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/flashcard_app"]

@@ -9,3 +9,5 @@ wheels/
 # venv
 .venv
 data/cosine_scores.npy
+requirements-dev.lock
+requirements.lock
